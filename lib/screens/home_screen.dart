@@ -34,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ])),
       ),
       body: Container(
-        
         child: Column(children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16),
