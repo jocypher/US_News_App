@@ -1,4 +1,3 @@
-import 'dart:async';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
@@ -13,13 +12,13 @@ class ArticleScreen extends StatefulWidget {
 }
 
 class _ArticleScreenState extends State<ArticleScreen> {
-  final Completer<WebViewController> _completer =
-      Completer<WebViewController>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        leading: const Icon(Icons.arrow_back_ios, color: Colors.black,),
         elevation: 0,
         title: RichText(
             text: const TextSpan(children: [
@@ -31,12 +30,9 @@ class _ArticleScreenState extends State<ArticleScreen> {
         ])),
       ),
       body: Container(
-        child: WebView(
-          initialUrl: widget.blogurl,
-          onWebViewCreated: ((WebViewController webViewController) {
-            _completer.complete(webViewController);
-          }),
-        ),
+        // child: WebViewWidget(
+        //     controller: ,
+        // ),
       ),
     );
   }
