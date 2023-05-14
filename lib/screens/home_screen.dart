@@ -43,15 +43,17 @@ class _HomeScreenState extends State<HomeScreen> {
         title: RichText(
             text: const TextSpan(children: [
           TextSpan(
-              text: "US",
+              text: "USA",
               style: TextStyle(color: Colors.black, fontSize: 20)),
           TextSpan(
               text: "News", style: TextStyle(fontSize: 20, color: Colors.blue))
         ])),
       ),
       body: _loading
-          ? const Center(
-              child: CircularProgressIndicator(),
+          ?  Center(
+              child: CircularProgressIndicator(
+
+              ),
             )
           :
           //Categories section
